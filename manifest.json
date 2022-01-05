@@ -1,0 +1,10 @@
+{
+  "id": "insert.date.by.tdb",
+  "name": "Insert Date",
+  "fileName": "insert-date-extension-tdb",
+  "author": "Tom de Bruin",
+  "author-email": "tomdebruin@gmail.com",
+  "description": "Put dates past, present, and future in your text that link to the Craft calendar",
+  "api": "0.0.4",
+  "main": "index.html"
+}
