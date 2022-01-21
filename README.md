@@ -20,3 +20,12 @@ Simply run `npm install` and than `npm run build` to generate the .craftX file w
 You can use `npm run dev` to test and debug in your local environment
 
 To learn more about Craft eXtensions visit the [Craft X developer portal](https://developer.craft.do).
+
+## Release Process
+
+- Update version number in package.json.
+- git tag with that version number.
+- run a build.
+- push to github.
+- on github draft a new release from tag.
+- manually drop `insert-date-extension-tdb.craftx` onto attachment area.
