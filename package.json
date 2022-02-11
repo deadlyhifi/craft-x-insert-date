@@ -1,6 +1,6 @@
 {
   "name": "craft-x-insert-date",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Put dates past, present, and future in your text that link to the Craft calendar",
   "scripts": {
     "build": "webpack --mode=production",
