@@ -1,4 +1,4 @@
-export default function getFormattedDate(date: Date | null = null) {
+export default function formatDate(date: Date | null = null) {
   const selectedDate = date ? date : new Date();
 
   return `${selectedDate.getFullYear()}-${(

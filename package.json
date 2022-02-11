@@ -11,7 +11,9 @@
   "devDependencies": {
     "@craftdocs/craft-extension-api": "0.0.4",
     "@craftdocs/craft-extension-api-sdk": "0.0.4",
-    "copy-webpack-plugin": "^10.2.1",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
     "react-dev-utils": "^12.0.0",
@@ -25,6 +27,7 @@
     "zip-webpack-plugin": "^4.0.1"
   },
   "dependencies": {
-    "calendar-lite": "github:daniel-tabarcea/calendar-lite"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

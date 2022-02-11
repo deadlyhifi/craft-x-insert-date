@@ -11,61 +11,119 @@ body {
 }
 
 body {
+  --font-colour: rgb(31, 34, 37);
+  --border: rgb(238, 238, 238);
+  --controls-hover-colour: rgb(31, 34, 37);
+  --controls-disabled-colour: rgb(202, 202, 202);
+  --day-select-background-hover: #27cd41;
+
   background-color: white;
   font-family: system-ui, -apple-system;
   text-align: center;
+  color: var(--font-colour);
 }
 
 body.dark {
+  --font-colour: rgb(255, 255, 255);
+  --border: rgb(56, 56, 56);
+  --controls-disabled-colour: rgb(146, 146, 146);
+
   background-color: #222;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
+.title {
+  font-weight: 500;
   height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid var(--border);
+  margin-block-end: 10px;
 }
 
-body.dark h1 {
-  color: #f2f2f2;
-  border-bottom-color: #464646;
+.container {
+  padding-inline: 10px;
 }
 
-button {
-  margin: 1rem auto;
-  width: 90%;
-  height: 36px;
-  font-size: 14px;
+header {
   font-weight: 500;
-  border: none;
-  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 10px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.controls button {
+  --webkit-appearance: none;
   cursor: pointer;
-  background-color: #035eff;
-  color: #f4f4f4;
-  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  color: var(--font-colour);
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s;
 }
 
-button:hover {
-  opacity: 0.85;
+.controls button:hover:not(:disabled) {
+  background-color: rgb(238, 238, 238);
+  color: var(--controls-hover-colour);
 }
 
-body.dark button {
-  background-color: #44b6ff;
-  color: #111111;
+.controls button:disabled {
+  cursor: initial;
 }
 
-button:active {
-  background-color: #b8b8b8;
+.controls button:disabled {
+  color: var(--controls-disabled-colour);
 }
 
-#select-date {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  background-color: white;
+.controls .previous-month svg {
+  transform: rotate(180deg);
+}
+
+/* ***************************** */
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.day-name {
+  font-size: 0.8rem;
+}
+
+.weekend {
+  color: tomato;
+}
+
+.calendar div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+}
+
+.day {
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s, color 0.1s;
+}
+
+.day.today {
+  background-color: var(--border);
+}
+
+.day.today:hover,
+.day:hover {
+  border-color: transparent;
+  background-color: var(--day-select-background-hover);
+  color: white;
 }
